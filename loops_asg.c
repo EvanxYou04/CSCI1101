@@ -70,13 +70,30 @@ int main()
 
 void loop_1(void)
 {
+  int i;
 
+  i = 1; 
+
+  while (i<=20)
+  {
+    printf("%4d", i);
+    i++;
+  }
  
   printf("\n\n"); 
 }//loop_1
 
 void loop_2(void)
 {
+  int i; 
+
+  i = 100;
+
+  do
+  {
+    printf("%4d", i );
+    i = i - 5;
+  } while (i>=5);
   
   
   printf("\n\n"); 
@@ -86,58 +103,41 @@ void loop_2(void)
 
 void loop_3(void)
 {
+  
+  char letters[26] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 
-	printf("\n\n");  
+  for (int i = 0; i < sizeof letters; i++)
+  {
+    printf("%c ", letters[i]);
+  }
+  
+  
+  printf("\n\n");
 }
 
 void loop_4(void)
 {
-  char alphabet[26] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-  int size = sizeof alphabet - 1; //26th letter at index 25 
-  for (int i = size ; i >= 0 ; i = i - 2)
-  {
-    printf("%c ", alphabet[i]);
-  }
+  char letters[26] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 
   printf("\n\n");  
 }
 
 void loop_5(void)
 {
-  for (size_t i = 1; i <= 12; ++i)
-  {
-    printf("%4d", (int)pow(i,2)); //prints int of i^2 from i= 1 to 12 
-  }
   
     printf("\n\n"); 
 }
 
 void loop_6(void)
 {
-  char alphabet[4] = {'A', 'B', 'C', 'D'}; 
-  for (int i = 0; i < 4; i++)
-  {
-    for (int j = 1; j <= 9; ++j)
-    {
-      printf("%c%d   ", alphabet[i],j);
-    }
-    printf("\n");
-  }
   
-  
+
+
   printf("\n\n"); 
 }
 
 void loop_7(void)
 {
-  for (int i = 1; i <= 20 ; i++)
-  {
-    for(int j = 1; j<= i; j++)
-    {
-      printf("%4d", j);
-    }
-    printf("\n");
-  }
   
 	
   printf("\n\n"); 
@@ -147,8 +147,19 @@ void loop_7(void)
 
 void loop_8(void)
 {
+int i, j;
 
-
+  for (i = 1; i <= 10; i++) // travel through the rows
+  {
+    
+    for (j = 1; j <= 10; j++) //travel through the column
+    {
+      printf("%4d", j*i); // multiply i * j
+    }
+    printf("\n");
+  }
+  
+  printf("\n\n");
 }//loop_8
 
 
